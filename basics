@@ -1,4 +1,4 @@
-Docker -----
+  Docker -----
 write a docker file - it will tells how to create a image and what are all the dependency it wants 
 cmd to build a image 
 - docker build -t <container_id/name> <path>
@@ -13,6 +13,11 @@ General cmd:
 -docker logs -f my_container
 -docker ps  -a #it will list container #-a list the stopped container also
 -docker images
+
+
+
+Kubernetes--------
+Instaling minikube for handson becaus it act as both master and worker node
 
 
 
