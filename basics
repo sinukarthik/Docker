@@ -17,7 +17,15 @@ General cmd:
 
 
 Kubernetes--------
-Instaling minikube for handson becaus it act as both master and worker node
+Installing minikube for handson becaus it act as both master and worker node.
+kubernets componetes
+control plane/ master node                                                            Worker node
+1. API server (communicate with Workernode - heart)                                   1.Kubelet (it is like a spy it update the pods detail and everything to api server)
+2. ETCD (database - brain )                                                           2.Container Runtime (kubelet will create and terminate container using this runtime)
+3. control manager (replicaset manager, daemon manager, service manager) 
+it checks the desired state and actual state
+4. Scheduler - it check for available node like load balancer 
+
 
 
 
