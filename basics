@@ -38,8 +38,8 @@ Write pod,service, replicas yaml file.
 -kubectl get images/rs/services  (replicaset - rs)
 -minikube service mario-service --url  (#to get service use this cmd minikube service mario-service --url op:http://127.0.0.1:49394)
 
-kube-proxy (present in every node) -it is like a table hold( stable ip + endpoint ip's of pod)
-it help to forward the request from service.yml using the mentioned label selector
+kube-proxy (present in every node) -it is like a table hold( stable ip + endpoint ip's of pod) 
+it help to forward the request from service.yml to kube-proxy it will check the table and redirect to using label selector.
 endpoint is an kubernetes object it hold the pod ip's (pod ip is ephemeral-change everytime newly created)
 endpoint communicate with controller manager(i.e endpoint controller)
 
