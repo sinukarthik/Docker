@@ -17,7 +17,7 @@ General cmd:
 
 
 Kubernetes--------
-Installing minikube for handson becaus it act as both master and worker node.
+Installing minikube (minikube start/stop) for handson becaus it act as both master and worker node.
 kubernets componetes
 control plane/ master node                                                            Worker node
 1. API server (communicate with Workernode - heart)                                   1.Kubelet (it is like a spy it update the pods detail and everything to api server)
@@ -25,6 +25,35 @@ control plane/ master node                                                      
 3. control manager (replicaset manager, daemon manager, service manager) 
 it checks the desired state and actual state
 4. Scheduler - it check for available node like load balancer 
+
+Cluster -> node -> pods
+
+cluster is nothing but have a collection of node having both master and worker node.
+Node is nothing but a server
+pods  is smallest deployable unit in worker node it has 1 or more containers, inside pod  it will share network and storage , each pod have different ip it was isolated.
+
+Write pod,service, replicas yaml file.
+-kubectl apply -f <filename.yml>  -f is file name
+-kubectl get pods  / kubectl delete pods <pod_name>
+-kubectl get images/rs/services  (replicaset - rs)
+-minikube service mario-service --url  (#to get service use this cmd minikube service mario-service --url op:http://127.0.0.1:49394)
+
+
+
+Git-----------
+git --version
+git init
+git add .
+git commit -m "comment"
+git config --global user.name"sinukarthik"
+git remote add  origin https://github.com/sinukarthik/Docker.git
+git push -u origin main
+git config --global user.name "SinuKarthik" 
+git config --global user.email "sinuartzz@gmail.com"
+git push -u origin main
+
+
+
 
 
 
