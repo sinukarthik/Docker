@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: mario-game
+  labels:
+    app: mario-game
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mario-fever
+  template:
+    metadata:
+      labels:
+        app: mario-fever
+    spec:
+      containers:
+        - name: mario
+          image: sinu23/mario:latest   # <-- use your Docker Hub image name
+          ports:
+            - containerPort: 8080

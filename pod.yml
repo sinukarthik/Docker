@@ -1,0 +1,14 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: mario
+  labels:
+    project: mario-fever
+spec:
+  containers:
+    - name: mario
+      image: sinu23/mario:latest
+      ports:
+        - containerPort: 8080

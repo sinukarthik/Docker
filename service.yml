@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mario-service
+spec:
+  type: NodePort   # You can also use LoadBalancer in cloud
+  selector:
+    app: mario-fever   # Must match ReplicaSet Pod labels
+  ports:
+    - port: 80          # Port exposed inside the cluster
+      targetPort: 8080  # Container port
+      nodePort: 30008   # Port on the node (only needed for NodePort type)
+
+#to get service use this cmd minikube service mario-service --url op:http://127.0.0.1:49394
