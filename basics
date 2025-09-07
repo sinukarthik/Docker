@@ -4,3 +4,17 @@ cmd to build a image
 - docker build -t <container_id/name> <path>
 cmd to run a container if we have image ready 
 - docker run -p <hostport:application_port> -volumes <volume_name:/data> <container_id/name>
+to enter into container and do changes 
+-docker exec -itd <container_name_or_id> <command>
+eg 
+docker exec -it <container_name> bash
+docker exec -it my_container ls /app
+General cmd:
+-docker logs -f my_container
+-docker ps  -a #it will list container #-a list the stopped container also
+-docker images
+
+
+
+
+
