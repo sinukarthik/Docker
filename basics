@@ -22,7 +22,7 @@ kubernets componetes
 control plane/ master node                                                            Worker node
 1. API server (communicate with Workernode - heart)                                   1.Kubelet (it is like a spy it update the pods detail and everything to api server)
 2. ETCD (database - brain )                                                           2.Container Runtime (kubelet will create and terminate container using this runtime)
-3. control manager (replicaset manager, daemon manager, service manager) 
+3. control manager (replicaset manager, Endpoint manager, service manager) 
 it checks the desired state and actual state
 4. Scheduler - it check for available node like load balancer 
 
@@ -38,6 +38,10 @@ Write pod,service, replicas yaml file.
 -kubectl get images/rs/services  (replicaset - rs)
 -minikube service mario-service --url  (#to get service use this cmd minikube service mario-service --url op:http://127.0.0.1:49394)
 
+kube-proxy (present in every node) -it is like a table hold( stable ip + endpoint ip's of pod)
+it help to forward the request from service.yml using the mentioned label selector
+endpoint is an kubernetes object it hold the pod ip's (pod ip is ephemeral-change everytime newly created)
+endpoint communicate with controller manager(i.e endpoint controller)
 
 
 Git-----------
